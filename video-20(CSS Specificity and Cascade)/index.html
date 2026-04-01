@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity and Cascade</title>
+    <style>
+        /* The last declaration in the CSS file takes precedence.
+        Specificity: Inline > ID > Class, Attribute, Pseudo-class > Element, Pseudo-element */
+        /* The Cascade Algorithm: 
+        1. Position and Order of Appearance
+        2. Specificity
+        3. Origin
+        4. Importance 
+        - Position and Order of Appearance : The last declaration in the CSS file takes precedence. 
+        - Specificity : The more specific selector takes precedence. 
+        - Origin : Declarations from the user's stylesheet take precedence over declarations from the browser's default stylesheet. 
+        - Importance : Declarations with !important take precedence over normal declarations. */
+        /* Specificity Calculation */
+        /* Inline Styles (1000) > IDs (100) > Classes, Attributes, Pseudo-classes (10) > Elements, Pseudo-elements (1) */
+
+
+
+        /* The specificity of this selector is 1 (one class) */
+        h1 {
+            color: aqua;
+        }
+
+        /* The specificity of this selector is 10 (one class) */
+        .yellow {
+            color: yellow;
+        }
+
+        /* The specificity of this selector is 10 (one class) */
+        .cred {
+            color: red;
+        }
+
+        /* The specificity of this selector is 1 + 10 (one element and one class) */
+        h1.cpurple {
+            color: purple;
+        }
+
+        /* The specificity of this selector is 10 (one class) */
+        /* Attribute Selector */
+        [data-x="a"] {
+            color: green;
+        }
+
+        /* !important */
+        /* .cred {
+            color: red !important
+        } */
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+</body>
+
+</html>
