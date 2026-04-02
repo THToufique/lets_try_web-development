@@ -1,0 +1,39 @@
+Build a simple webpage called my-card.html — a profile card for yourself.
+Requirements:
+HTML Structure:
+
+Use proper semantic tags (main, header, section, footer)
+A profile card with:
+
+Your name as heading
+A short bio paragraph
+An unordered list of your 3 skills
+A link to your GitHub
+An image (can be any placeholder image from https://picsum.photos/150)
+
+
+
+CSS Styling (external stylesheet only — no inline, no internal):
+
+Give the body a background color
+Style the card with:
+
+A different background color
+Padding and margin
+A border or border-radius (rounded corners)
+Max width so it doesn't stretch full screen
+
+
+Style the heading with a custom color and font
+Style the paragraph with a different text color
+Style the link — remove underline, change color
+Style the list items with custom color
+Use at least one ID selector and one class selector
+Apply CSS Cascade — override one style using specificity
+
+
+Rules:
+
+No frameworks, no copy paste, no AI
+External CSS file only
+Push to your sigma repo as challenge-1/
